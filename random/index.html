@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Get Random Comment</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-md navbar-dark main-menu">
+            <a class="navbar-brand" href="index.html">SOA- UEH 500</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="btn btn-primary" href="../Home.html" role="button"> Trang chủ </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="main-content my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mt-3">
+                    <div class="comment-form">
+                        <div class="form-group">
+                            <label for="access-token">Access Token</label>
+                            <div class="token-group d-flex">
+                                <input type="text" class="form-control" name="access-token" id="access-token"
+                                    placeholder="Access Token">
+                                <a class="btn btn-primary btn-saveToken" type="submit" href="https://chrome.google.com/webstore/detail/multiple-tools-for-facebo/eojdckfcadamkapabechhbnkleligand" role="button"> Lấy Token</a>
+                                <button type="button" name="btn-saveToken" id="saveToken"
+                                    class="btn btn-primary btn-saveToken" onclick="saveToken()">Lưu
+                                    Token</button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="post-id">ID Bài đăng</label>
+                            <input type="text" class="form-control" name="post-id" id="post-id"
+                                placeholder="ID bài đăng">
+                        </div>
+                        <div class="form-group">
+                            <label for="comment-range">Số lượng comment muốn lấy</label>
+                            <input type="number" class="form-control" name="comment-range" id="comment-range"
+                                placeholder="1" value="1">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" name="btn-getComment" id="btn-getcomment"
+                                class="btn btn-primary btn-getcomment" onclick="getComment()">Lấy bình luận</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mt-3">
+                    <div id="comment-result" class="comment-result">
+                        <h5>Kết quả:</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row grid-demo">
+                <div class="col-md-6">
+                   <h6>Hướng dẫn sử dụng</h6>
+                   <p> Bước 1: Lấy Access token của user thông qua tool để lấy được token của bạn trong thời gian ngắn nhất: Multiple Tools for Facebook</p>
+                   <p> Bước 2: Đăng nhập tài khoản , nhìn góc trên cùng bên phải của màn hình, click vào biểu tượng tam giác ngược, chọn access , Sau đó nhấn Lưu token</p>
+                   <p> Bước 3: Lấy Id bài đăng ( </p>
+                   <p> Bước 4: Nhập số lượng comment cần lấy, nhấn button "Lấy bình luận"</p>
+                   <p> Bước 5: Xuất kết quả người thắng minigame</p>
+                </div> 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/contentScript.js"></script>
+</body>
+
+</html>

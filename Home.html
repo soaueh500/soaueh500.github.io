@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+</script>
+<style>
+    body {
+        background-color: #1e1e2b;
+        color: #a9a9b1;
+    }
+
+    .btn {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    .text {
+        text-align: left;
+        margin-top: 10px;
+    }
+
+    h1 {
+        color: white;
+        font-size: 28px;
+        text-align: center;
+        font-family: Caslon;
+        white-space: pre-wrap;
+        letter-spacing: .15em;
+        line-height: 1.5em;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    h3 {
+        color: #db4fd1;
+        font-size: 14px;
+        text-align: center;
+        font-family: Caslon;
+        white-space: pre-wrap;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    h5 {
+        color: white;
+        font-size: 15px;
+        text-align: left;
+        font-family: Caslon;
+        margin-top: 20px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h6 {
+        color: #db4fd1;
+        font-size: 14px;
+        text-align: left;
+        font-family: Caslon;
+        white-space: pre-wrap;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    .flex {
+        text-align: center;
+    }
+
+    .btn-saveToken {
+        min-width: 98px;
+        margin-left: 10px;
+    }
+
+    .btn-primary {
+        background-color: #ba54f5 !important;
+        background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
+        border: none;
+    }
+
+    .main-menu,
+    .comment-form,
+    .comment-result {
+        background-color: #27293d;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
+    }
+
+    .image {
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+    .p-absolute {
+        position: absolute;
+    }
+
+    .p-relative {
+        position: relative;
+    }
+
+    .photo-content {
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    .p-relative:hover .image {
+        opacity: 0.3;
+    }
+
+    .p-relative:hover .photo-content {
+        opacity: 1;
+    }
+
+    .text {
+        color: white;
+        font-size: 30px;
+        text-align: left;
+        font-family: Caslon;
+        white-space: pre-wrap;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    .groove {
+        border: 1px solid #ba54f5;
+        display: block;
+        height: 300px;
+        width: auto;
+    }
+
+    hr {
+        border: 0.5px solid #ba54f5;
+    }
+
+    .footer {
+        width: 100%;
+        padding: 1.5rem 7.5%;
+        bottom: 0;
+    }
+img:hover{
+ z-index: 100;
+ transform: scale(1.1);
+}
+    @media screen and (min-width: 992px) {
+        .bd-placeholder-img-lg [class*="col-"] {
+            width: 100%;
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark main-menu">
+        <img src="img/logo.jpg" height="70px" width="70px">
+        <a class="navbar-brand" href="#"> SOA UEH 500</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"> Trang chủ <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+            <form class="form-inline">
+                <a class="btn btn-primary btn-saveToken" type="submit" href="random/index.html" role="button"> "Loto" Comment
+                </a>
+                <a class="btn btn-primary btn-saveToken" type="submit" href="getcmt/index.php" role="button">  Reaction
+                    </a>
+                    <a class="btn btn-primary btn-saveToken" type="submit" href="hashtag/index.php" role="button">  Hashtag
+                        </a>
+            </form>
+        </nav>
+    </nav>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active p-relative">
+                <div class="p-absolute photo-content">
+                    <p class="text">Ứng dụng Facebook API vào hệ thống hỗ trợ quản lý fanpage và group </p>
+                </div>
+                <img src="img/1(1).jpg" class="d-block w-100 image">
+            </div>
+            <div class="carousel-item p-relative">
+                <div class="p-absolute photo-content">
+                    <p class="text">Trải nghiệm mới lạ đầy thú vị</p>
+                </div>
+                <img src="img/HINH1.png" class="d-block w-100 image">
+            </div>
+            <div class="carousel-item p-relative">
+                    <div class="p-absolute photo-content">
+                     <p class="text">Tất cả có ở team B4I</p>
+                     </div>
+                <img src="img/HINH3.png" class="d-block w-100 image">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="container">
+        <div class="row grid-demo">
+            <div class="col-md-12">
+                <hr />
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row grid-demo">
+                <div class="col-md-6 flex">
+                    <h1> Giảng viên hướng dẫn </h1>
+                    <img src="img/manhtuan.jpg" class="rounded-circle" height="200px" width="200px">
+                    <h3>Nguyễn Mạnh Tuấn</h3>
+                    <p> Thạc sĩ</p>
+                </div>
+
+                <div class="col-md-6">
+                    <h1> Giới thiệu đề tài </h1>
+                    <h5 class="groove">
+                        Toàn cầu hóa là cụm từ không hề xa lạ với con người hiện nay, con người từng bước từng bước tiếp
+                        cận với kĩ thuật số hóa, làm quen, chinh phục và nỗ lực không hề mệt mỏi để tạo ra những công
+                        cụ, phục vụ cho cuộc sống của chính họ.
+                        Và ngẫu nhiên Facebook trở thành mạng xã hội phổ biến nhất và có sức hút nhất thế giới. Ban đầu
+                        mục đích cũng không khác biệt những nền tảng mạng xã hội khác cho lắm, bạn có thể chia sẻ những
+                        khoảnh khắc vui vẻ, kết bạn, nói chuyện , chia sẻ, tìm kiếm thông tin với phạm vi toàn cầu. Nếu
+                        như vậy thì cũng đâu có gì đáng để nó vươn lên thành mạng xã hội được yêu thích nhất đâu nhỉ? Đó
+                        là vì tính ứng dụng và gía trị thương mại của facebook đem lại hiệu quả rất lớn, nhiều bạn trẻ
+                        xem đây là môi trường kinh doanh giá rẻ đem lại hiệu quả tuyệt vời .Do đó việc tạo ra những công
+                        cụ tiện ích mở rộng ứng dụng trong facebook ngày càng nhiều, sau đây chúng mình xin đem tới cho
+                        các bạn một số tool tiện ích ứng dụng API facebook và những kiến thức đã học tại nhà trường vào
+                        việc mở rộng phát triển Facebook hiệu quả nhé
+
+                    </h5>
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="row grid-demo">
+                    <div class="col-md-12">
+                        <h1> Team Member</h1>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="row grid-demo">
+                        <div class="col-md-12">
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row grid-demo">
+                            <div class="col-md-3 ">
+                                <img src="img/chou.jpg" class="rounded-circle" height="200px" width="200px">
+                                <h6>Vũ Thị Thanh Châu</h6>
+                                <p>31161024491</p>
+                                <p>Business Information System</p>
+
+                            </div>
+                            <div class="col-md-3 ">
+                                <img src="img/khue.jpg" class="rounded-circle" height="200px" width="200px">
+                                <h6>Nguyễn Thụy Như Khuê</h6>
+                                <p>31161024815</p>
+                                <p>Business Information System</p>
+
+                            </div>
+                            <div class="col-md-3 ">
+                                <img src="img/mai.jpg" class="rounded-circle" height="200px" width="200px">
+                                <h6>Phạm Hạnh Mai</h6>
+                                <p>31161024677</p>
+                                <p>Business Information System</p>
+
+                            </div>
+                            <div class="col-md-3 ">
+                                <img src="img/phuong.jpg" class="rounded-circle" height="200px" width="200px">
+                                <h6>Trương Thu Phương</h6>
+                                <p> 31161022907</p>
+                                <p>Business Information System</p>
+
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row grid-demo">
+                                <div class="col-md-12">
+                                    <hr />
+                                </div>
+                            </div>
+                            <div class="container">
+                                <div class="row grid-demo">
+                                    <div class="col-md-6">
+                                        <h6>Business Information System</h6>
+                                        <img src="img/logo.jpg" height="70px" width="70px">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h6> Contact </h6>
+                                        <p>59C Nguyễn Đình Chiểu, Phường 6, Quận 3, TP.HCM</p>
+                                        <p>Điện thoại: 84.28.38295299 - Fax: 84.28.38250359 </p>
+                                        <p>Email:<u> info@ueh.edu.vn</u></p>
+                                    </div>
+                                </div>
+                                
+
+</html>

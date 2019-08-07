@@ -1,0 +1,99 @@
+body {
+    background-color: #1e1e2b;
+    color: #a9a9b1;
+}
+a {
+    color: #db4fd1;
+}
+
+a:hover {
+    color: #db4fd1;
+}
+
+.main-menu,
+.comment-form,
+.comment-result {
+    background-color: #27293d;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.151);
+}
+
+.comment-form,
+.comment-result {
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.comment-form input,
+.comment-message,
+.comment-form input:focus {
+    background-color: #1e1e2b;
+    border: 0;
+    color: #a9a9b1;
+}
+
+.comment-form input:focus {
+    box-shadow: unset;
+}
+
+.btn-saveToken {
+    min-width: 98px;
+    margin-left: 10px;
+}
+
+.btn-primary {
+    background-color: #ba54f5 !important;
+    background-image: linear-gradient(to bottom left, #e14eca, #ba54f5, #e14eca) !important;
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.comment-form label,
+.comment-result h5 {
+    color: #fff
+}
+
+.comment {
+    display: grid;
+    grid-template-columns: 50px auto;
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.comment-message {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
+
+.message {
+    margin-bottom: 0;
+    word-break: break-word;
+}
+
+.comment-result {
+    display: none;
+}
+h6 {
+    color: #db4fd1;
+    font-size: 14px;
+    text-align: left;
+    font-family: Caslon;
+    white-space: pre-wrap;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
